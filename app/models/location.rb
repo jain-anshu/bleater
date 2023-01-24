@@ -8,4 +8,6 @@
 #  updated_at :datetime         not null
 #
 class Location < ApplicationRecord
+  has_many :users
+  has_many :bleats, through: :users, source: :authored_bleats
 end

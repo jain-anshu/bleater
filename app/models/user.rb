@@ -9,4 +9,6 @@
 #  location_id :integer
 #
 class User < ApplicationRecord
+  has_many :authored_bleats, class_name: 'Bleat', foreign_key: :author_id
+  belongs_to :location
 end
